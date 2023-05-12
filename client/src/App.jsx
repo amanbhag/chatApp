@@ -1,8 +1,12 @@
-import React from "react";
 import Register from "./components/Register";
+import { UserContextProvider } from "./context/userContext";
 
 const App = () => {
-  return <Register />;
+  return (
+    <UserContextProvider>
+      <Register />
+    </UserContextProvider>
+  );
 };
 
 export default App;
